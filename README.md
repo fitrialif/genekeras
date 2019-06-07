@@ -10,5 +10,5 @@ pip install git+https://github.com/d-corsi/genekeras.git
 ```
 Update using pip:
 ```
-pip install --update git+https://github.com/d-corsi/genekeras.git
+pip install --upgrade git+https://github.com/d-corsi/genekeras.git
 ```

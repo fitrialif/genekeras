@@ -1,4 +1,4 @@
-from genekeras import *
+#from genekeras import *
 
 import keras
 from keras.models import Sequential, load_model
@@ -6,6 +6,10 @@ from keras.layers import Dense
 from keras.layers import GaussianNoise, Activation, Dropout
 
 import numpy as np
+
+import genekeras
+
+genekeras.hello_world()
 
 def create_model():
     model = Sequential()
