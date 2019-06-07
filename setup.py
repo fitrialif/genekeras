@@ -9,5 +9,5 @@ setup(
     author_email='corsi.davide@outlook.com',
     install_requires=[],
     license='GPLv3',
-    packages=find_packages()
+    packages=[]
 )
