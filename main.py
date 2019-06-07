@@ -7,7 +7,6 @@ from keras.layers import GaussianNoise, Activation, Dropout
 
 import numpy as np
 
-
 def create_model():
     model = Sequential()
     model.add(Dense(64, input_shape=(STATE_SIZE, ), activation='relu'))
