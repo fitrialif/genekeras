@@ -7,18 +7,18 @@ import os
 
 class GeneKeras:
 
-    def __init__(self, load_compiled = False, crossover_enabled = True, mutation_enabled = True):
+    def __init__(self, load_compiled = False):
         self.model_1 = None
         self.model_2 = None
 
         self.load_compiled = load_compiled
-        self.crossover_enabled = crossover_enabled
-        self.mutation_enabled = mutation_enabled
 
         self.set_param()
 
 
-    def set_param(self, mutation_prob = 0.1, mutation_rate = 0.5):
+    def set_param(self, crossover_enabled = True, mutation_enabled = True, mutation_prob = 0.1, mutation_rate = 0.5):
+        self.crossover_enabled = crossover_enabled
+        self.mutation_enabled = mutation_enabled
         self.mutation_prob = mutation_prob
         self.mutation_rate = mutation_rate
 
