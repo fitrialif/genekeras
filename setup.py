@@ -4,10 +4,11 @@ setup(
     name='genekeras',
     version='0.0.1',
     description='My private package from private github repo',
-    url='git@github.com:d-corsi/GeneKeras.git',
+    url='https://github.com/d-corsi/GeneKeras',
     author='Davide Corsi',
     author_email='corsi.davide@outlook.com',
     license='unlicense',
     packages=['numpy'],
-    zip_safe=False
+    install_requires=[],
+    packages=find_packages()
 )
