@@ -1,4 +1,4 @@
-#from genekeras import *
+import genekeras
 
 import keras
 from keras.models import Sequential, load_model
@@ -6,10 +6,6 @@ from keras.layers import Dense
 from keras.layers import GaussianNoise, Activation, Dropout
 
 import numpy as np
-
-import genekeras
-
-genekeras.hello_world()
 
 def create_model():
     model = Sequential()
@@ -44,7 +40,7 @@ ACTION_SIZE = 3
 mom = create_model_special()
 dad = create_model_special()
 
-gk = GeneKeras(load_compiled = True)
+gk = genekeras.GeneKeras(load_compiled = True)
 gk.set_parents(mom, dad)
 gk.set_param(crossover_enabled = False, mutation_enabled = False, mutation_prob = 0.1, mutation_rate = 0.5)
 

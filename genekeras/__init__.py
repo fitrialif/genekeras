@@ -1,1 +1,1 @@
-from genekeras import GeneKeras
+from .genekeras import GeneKeras
