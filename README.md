@@ -14,7 +14,7 @@ pip install --upgrade git+https://github.com/d-corsi/genekeras.git
 ```
 Remove using pip:
 ```
-pip uninstall git+https://github.com/d-corsi/genekeras.git
+pip uninstall genekeras
 ```
 
 # Example
