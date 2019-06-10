@@ -49,13 +49,6 @@ class GeneKeras:
         return self.model_3
 
 
-    def get_children(self, number):
-        children = []
-        for i in range (number):
-            children.append(get_child())
-        return children
-
-
     def crossover(self):
         available_layers_number = 0
 
@@ -72,12 +65,24 @@ class GeneKeras:
             if (isinstance(self.model_3.layers[i], Dense)):
                 if(j < cut_layer):
                     self.model_3.layers[i].set_weights(self.model_1.layers[i].get_weights())
-                #if (j == cut_layer):
-                    # inner cut
+                if (j == cut_layer):
+                    self.inner_crossover(j)
                 else:
                     self.model_3.layers[i].set_weights(self.model_2.layers[i].get_weights())
 
                 j += 1
+
+    def inner_crossover(self, layer_number):
+        weights_1, biases_1 = self.model_1.layers[layer_number].get_weights()
+        weights_2, biases_2 = self.model_2.layers[layer_number].get_weights()
+
+        cut_weights = np.random.random_integers(0, len(weights_1))
+        cut_biases = np.random.random_integers(0, len(biases_1))
+
+        weights_3 = np.concatenate((weights_1[:cut_weights], weights_2[cut_weights:]))
+        biases_3 = np.concatenate((biases_1[:cut_biases], biases_2[cut_biases:]))
+
+        self.model_3.layers[layer_number].set_weights([weights_3, biases_3])
 
 
     def mutation(self):
