@@ -72,8 +72,11 @@ class GeneKeras:
             if (isinstance(self.model_3.layers[i], Dense)):
                 if(j < cut_layer):
                     self.model_3.layers[i].set_weights(self.model_1.layers[i].get_weights())
+                #if (j == cut_layer):
+                    # inner cut
                 else:
                     self.model_3.layers[i].set_weights(self.model_2.layers[i].get_weights())
+
                 j += 1
 
 

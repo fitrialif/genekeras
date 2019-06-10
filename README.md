@@ -24,7 +24,7 @@ import genekeras
 
 gk = genekeras.GeneKeras(load_compiled = True)
 gk.set_parents(mom, dad)
-gk.set_param(crossover_enabled = False, mutation_enabled = False, mutation_prob = 0.1, mutation_rate = 0.5)
+gk.set_param(crossover_enabled=False, mutation_enabled=False, mutation_prob=0.1, mutation_rate=0.5)
 child = gk.get_child()
 ```
 
